@@ -1,0 +1,16 @@
+# Sensitive environment variables
+.env
+
+# Cache & Profile data
+.pplx_cache.json
+browser_profile/
+__pycache__/
+
+# Output files
+comments.json
+test_comments.json
+*.csv
+
+# Python byte code
+*.pyc
+*.pyo
