@@ -1,0 +1,21 @@
+model_list:
+  - model_name: sonar
+    litellm_params:
+      model: perplexity/sonar
+      api_key: os.environ/PERPLEXITY_API_KEY
+  - model_name: sonar-pro
+    litellm_params:
+      model: perplexity/sonar-pro
+      api_key: os.environ/PERPLEXITY_API_KEY
+  - model_name: gpt-3.5-turbo
+    litellm_params:
+      model: perplexity/sonar
+      api_key: os.environ/PERPLEXITY_API_KEY
+  - model_name: gpt-4o
+    litellm_params:
+      model: perplexity/sonar-pro
+      api_key: os.environ/PERPLEXITY_API_KEY
+
+general_settings:
+  master_key: sk-local-dev
+  disable_master_key_return: false
