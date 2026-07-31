@@ -1,16 +1,43 @@
 model_list:
+  # -------------------------------------------------------------
+  # 1. Perplexity API (已默认配置)
+  # -------------------------------------------------------------
   - model_name: sonar
     litellm_params:
       model: perplexity/sonar
       api_key: os.environ/PERPLEXITY_API_KEY
+
   - model_name: sonar-pro
     litellm_params:
       model: perplexity/sonar-pro
       api_key: os.environ/PERPLEXITY_API_KEY
+
+  # -------------------------------------------------------------
+  # 2. DeepSeek API (自定义 API 示例 - 可在 .env 中设置 DEEPSEEK_API_KEY)
+  # -------------------------------------------------------------
+  - model_name: deepseek-chat
+    litellm_params:
+      model: openai/deepseek-chat
+      api_base: https://api.deepseek.com
+      api_key: os.environ/DEEPSEEK_API_KEY
+
+  # -------------------------------------------------------------
+  # 3. Kimi / Moonshot API (自定义 API 示例 - 可在 .env 中设置 MOONSHOT_API_KEY)
+  # -------------------------------------------------------------
+  - model_name: moonshot-v1-8k
+    litellm_params:
+      model: openai/moonshot-v1-8k
+      api_base: https://api.moonshot.cn/v1
+      api_key: os.environ/MOONSHOT_API_KEY
+
+  # -------------------------------------------------------------
+  # 4. OpenAI 默认别名重定向
+  # -------------------------------------------------------------
   - model_name: gpt-3.5-turbo
     litellm_params:
       model: perplexity/sonar
       api_key: os.environ/PERPLEXITY_API_KEY
+
   - model_name: gpt-4o
     litellm_params:
       model: perplexity/sonar-pro
